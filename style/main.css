@@ -1,12 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
+body {
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    line-height: 1.5;
+}
+
+/* body {
+    background: url(/resource/bg10.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
 section {
     position: relative;
     width: 100%;
@@ -19,6 +29,18 @@ section {
     background-position: center;
 }
 
+section.page-ayo-vaksin,
+section.page-how,
+section.page-home {
+    background: url(/resource/bg11.png); background-size: cover; background-position: center;
+}
+
+section.page-contact,
+section.page-age,
+section.page-select-location {
+    background: url(/resource/bg12.png); background-size: cover; background-position: center;
+}
+
 header {
     position: relative;
     top: 0;
@@ -27,6 +49,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Fredoka One', sans-serif;
 }
 
 header .logo {
@@ -49,6 +72,11 @@ header .navigation a {
     transition-property: background;
 }
 
+.page-ayo-vaksin header .navigation a {
+    background: lavender;
+    color: #000;
+}
+
 .color {
     color: lavender;
 }
@@ -65,11 +93,19 @@ header .navigation a:hover:not(.active) {
 .content {
     max-width: 650px;
     margin-top: 60px;
-    margin-left: 240px;
+    margin-left: 10%;
     padding-right: 30px;
     padding-left: 30px;
 }
 
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 2em;
+}
+
+.info {
+    margin-top: 48px;
+}
 .info a {
     color: rgb(153, 51, 65);
     text-decoration: none;
@@ -77,8 +113,29 @@ header .navigation a:hover:not(.active) {
     transition-property: color;
 }
 
+.info .interactive-btn {
+    display: inline-block;
+    background: red;
+    padding: 1em 2em;
+    border-radius: 8px;
+    background-color: #8fd4b7;
+    color: white;
+}
+
+.info .interactive-btn:first-child {
+    margin-right: 16px;
+}
+
 .info a:hover:not(.active) {
     color: grey;
+}
+
+.info input[type=submit] {
+    background-color: #8fd4b7;
+    padding: 1em 2em;
+    color: white;
+    border: 0;
+    border-radius: 8px;
 }
 
 footer {
@@ -87,9 +144,9 @@ footer {
     color: rgb(153, 51, 65);
 }
 
-.box {
+/* .box {
     color: rgb(153, 51, 65);
-}
+} */
 
 .next {
     margin-top: 150px;
@@ -102,4 +159,8 @@ footer {
     border-radius: 20px;
     transition: 0.3s;
     transition-property: background;
+}
+
+.next a {
+    font-family: 'Fredoka One', sans-serif;
 }

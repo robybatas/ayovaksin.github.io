@@ -30,11 +30,14 @@ section {
 }
 
 section.page-ayo-vaksin,
+section.page-how,
 section.page-home {
     background: url(/resource/bg11.png); background-size: cover; background-position: center;
 }
 
-section.page-contact {
+section.page-contact,
+section.page-age,
+section.page-select-location {
     background: url(/resource/bg12.png); background-size: cover; background-position: center;
 }
 
@@ -127,15 +130,23 @@ header .navigation a:hover:not(.active) {
     color: grey;
 }
 
+.info input[type=submit] {
+    background-color: #8fd4b7;
+    padding: 1em 2em;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+}
+
 footer {
     text-align: center;
     font-size: 12px;
     color: rgb(153, 51, 65);
 }
 
-.box {
+/* .box {
     color: rgb(153, 51, 65);
-}
+} */
 
 .next {
     margin-top: 150px;
@@ -148,4 +159,8 @@ footer {
     border-radius: 20px;
     transition: 0.3s;
     transition-property: background;
+}
+
+.next a {
+    font-family: 'Fredoka One', sans-serif;
 }

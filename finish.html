@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="style/main.css">
+    </head>
+    <body>
+        <section class="page-home">
+            <header>
+                <a href="/index.htlm" class="logo">#ayoVaksin</a>
+                <div class="navigation">
+                    <a href="index.html">home</a>
+                    <a href="contact.html">contact</a>
+                    <a href="ayoVaksin.html">about</a>
+                </div>
+            </header>
+            <div class="content">
+                <form>
+                    <input type="text" placeholder="masukan nama" id= "form-nama">
+                    <input type="test" placeholder="masukan ktp" id="form-ktp">
+                    <button type="button" id="button-daftar">Daftar</button>
+                </form>
+
+                <div id="terdaftar">
+                </div>
+            </div>
+        </section>
+    </body>
+    <footer>
+        <p>Created by Hacktivate-Oslo-Kelompok7 2021</p>
+    </footer>
+    
+    <script>
+        let data = [
+            { nama: 'joko', ktp: '123456'},
+            { nama: 'budi', ktp: '1234567'}
+        ];
+
+        function deleteData(ktp){
+            let newData = [];
+            for(let i=0; i<data.length; i++) {
+                if(data[i].ktp !== ktp) {
+                    newData.push(data[i]);
+                }
+            }
+            data = newData;
+            showData();
+        }
+
+        function showData() {
+            let html = '';
+            for(let i=0; i<data.length; i++) {
+                html += `<p>${i+1}. ${data[i].nama} - ${data[i].ktp} 
+                <buttononclick="deleteData('${data[i].ktp}')">Delete</button></p>`;
+
+            }
+            document.getElementById('terdaftar').innerHTML = html;
+        }
+        showData();
+
+        document.getElementById('button-daftar').addEventListener('click', function() {
+            let nama = document.getElementById('form-nama').value;
+            let ktp = document.getElementById('form-ktp').value;
+
+            if(ktp,length < 16) {
+                alert('ktp harus 16 karakter');
+            }else {
+                data.push({ nama: nama, ktp: ktp });
+                showData();
+
+                document.getElementById('form-ktp'.value = '';
+                document.getElementById('form-nama'.value = '';
+                alert('sukses bos!');
+            }
+        })
+    </script>
+    </html>html>

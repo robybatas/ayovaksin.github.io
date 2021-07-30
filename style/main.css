@@ -130,7 +130,8 @@ header .navigation a:hover:not(.active) {
     color: #004aad;
 }
 
-.info input[type=submit] {
+.info input[type=submit],
+.info button {
     background-color: hsl(144, 36%, 55%);
     padding: 1em 2em;
     color: white;
@@ -139,7 +140,8 @@ header .navigation a:hover:not(.active) {
     margin-top: 2em;
 }
 
-.info input[type=submit]:hover {
+.info input[type=submit]:hover,
+.info button:hover {
     color: #004aad;
 }
 
@@ -168,4 +170,17 @@ footer {
 
 .next a {
     font-family: 'Fredoka One', sans-serif;
+}
+
+.puskesmas-location-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.puskesmas-location-buttons * {
+    margin-left: 16px;
+}
+
+.puskesmas-location-buttons button:hover {
+    color: #004aad;
 }

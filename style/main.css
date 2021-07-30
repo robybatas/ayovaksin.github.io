@@ -72,10 +72,10 @@ header .navigation a {
     transition-property: background;
 }
 
-// .page-ayo-vaksin header .navigation a {
-//     background: lavender;
-//     color: #000;
-// }
+/* .page-ayo-vaksin header .navigation a {
+    background: lavender;
+    color: #000;
+} */
 
 .color {
     color: lavender;

@@ -184,3 +184,26 @@ footer {
 .puskesmas-location-buttons button:hover {
     color: #004aad;
 }
+
+#terdaftar {
+    margin-top: 2em;
+}
+
+#terdaftar p {
+    display: flex;
+    width: 80%;
+    margin-bottom: 1em;
+}
+
+#terdaftar p span {
+    flex-grow: 1;
+}
+
+#terdaftar p button,
+#button-daftar {
+    background-color: hsl(144, 36%, 55%);
+    padding: .5em .5em;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+}

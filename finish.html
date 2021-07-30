@@ -52,8 +52,8 @@
         function showData() {
             let html = '';
             for(let i=0; i<data.length; i++) {
-                html += `<p>${i+1}. ${data[i].nama} - ${data[i].ktp} 
-                <buttononclick="deleteData('${data[i].ktp}')">Delete</button></p>`;
+                html += `<p><span>${i+1}. ${data[i].nama} - ${data[i].ktp}</span> 
+                <button onclick="deleteData('${data[i].ktp}')">Delete</button></p>`;
 
             }
             document.getElementById('terdaftar').innerHTML = html;
@@ -64,14 +64,14 @@
             let nama = document.getElementById('form-nama').value;
             let ktp = document.getElementById('form-ktp').value;
 
-            if(ktp,length < 16) {
+            if(ktp.length < 16) {
                 alert('ktp harus 16 karakter');
             }else {
                 data.push({ nama: nama, ktp: ktp });
                 showData();
 
-                document.getElementById('form-ktp'.value = '';
-                document.getElementById('form-nama'.value = '';
+                document.getElementById('form-ktp').value = '';
+                document.getElementById('form-nama').value = '';
                 alert('sukses bos!');
             }
         })
